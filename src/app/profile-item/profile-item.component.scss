@@ -1,0 +1,115 @@
+@import "../../shared/scss/variables";
+
+.profile-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 32px;
+  padding: 32px 24px;
+  border: solid 1px ($light-solid);
+  border-radius: 2px;
+
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      h3 {
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 133%;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+      }
+    }
+
+    img {
+      width: 71px;
+      height: 71px;
+    }
+  }
+
+  &__about {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 133%;
+  }
+
+  &__keys {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px;
+
+    li {
+      display: inline-block;
+      padding: 4px 8px;
+      border: solid 2px $light-solid;
+      border-radius: 2px;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 133%;
+    }
+  }
+
+  &__interaction {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+
+    .button {
+      min-width: 44px;
+      height: 44px;
+      padding: 14px;
+      background-color: $primary-primary;
+      border: 1px solid $dark-solid;
+      border-radius: 2px;
+      color: $dark-solid;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 171%;
+
+      &_type_added {
+        background-color: transparent;
+        border-color: $primary-primary;
+        background-image: url("../../../public/assets/images/icon.png");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &_type_text {
+        padding: 10px 20px;
+        min-width: 132px;
+        svg {
+          display: inline-block;
+          vertical-align: middle;
+          margin-left: 8px;
+        }
+      }
+      &_type_click {
+        text-align: center;
+        width: 44px;
+        svg {
+          display: inline-block;
+          vertical-align: top;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 478px) {
+  .profile-info {
+    padding: 16px 12px;
+    column-gap: 20px;
+  }
+}
