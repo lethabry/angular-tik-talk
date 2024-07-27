@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-@import "./shared/scss/variables", "./shared/scss/normalize";
+@import "./shared/scss/variables", "./shared/scss/normalize",
+  "./shared/scss/fonts";
 
 * {
   padding: 0;
@@ -22,4 +23,5 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  font-family: "JetBrainsMono", Arial, Helvetica, sans-serif;
 }
