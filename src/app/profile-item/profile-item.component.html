@@ -3,21 +3,17 @@
     <div class="profile-info__main">
       <img src="/assets/images/Img.png" alt="Фото профиля" />
       <div>
-        <h3>Райан Гослинг</h3>
-        <p>ryan.gosling</p>
+        <h3>{{ profile.firstName }} {{ profile.lastName }}</h3>
+        <p>{{ profile.username }}</p>
       </div>
     </div>
     <p class="profile-info__about">
-      Список навыков, который мы обсудили выше, — основа резюме,
-      но не единственная его часть. Также можно рассказать о себе в классическом
-      смысле — этот раздел можно добавить в сопроводительное письмо.
+      {{ profile.description }}
     </p>
     <ul class="profile-info__keys">
-      <li>JS</li>
-      <li>CSS</li>
-      <li>HTML</li>
-      <li>Angular</li>
-      <li>Frontend</li>
+      @for (tag of profile.stack; track $index) {
+      <li>{{ tag }}</li>
+      }
     </ul>
     <div class="profile-info__interaction">
       <button class="button button_type_added"></button>

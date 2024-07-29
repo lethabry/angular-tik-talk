@@ -1,1 +1,3 @@
-<app-profile-item></app-profile-item>
+@for (profile of profiles; track profile.id ){
+<app-profile-item [profile]="profile"></app-profile-item>
+}
