@@ -9,7 +9,6 @@ export class ProfileService {
   http = inject(HttpClient);
   urlPath = 'https://icherniakov.ru/yt-course/';
 
-  constructor() {}
   getTestProfiles() {
     return this.http.get<IProfile[]>(`${this.urlPath}account/test_accounts`);
   }

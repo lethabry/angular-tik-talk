@@ -5,10 +5,11 @@
 <section class="login">
   <div class="login__content">
     <h2>Вход</h2>
-    <form method="post">
+    <form method="post" [formGroup]="form" (ngSubmit)="onSubmit()">
       <label for="telegramName"> Telegram username </label>
       <div class="login__input-content">
         <input
+          formControlName="username"
           type="text"
           id="telegramName"
           name="telegramName"
@@ -33,6 +34,7 @@
       <label for="password">Пароль</label>
       <div class="login__input-content">
         <input
+          formControlName="password"
           type="password"
           id="password"
           name="password"
