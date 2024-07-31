@@ -15,11 +15,11 @@ html {
 }
 
 body {
-  max-width: 1440px;
   min-height: 100vh;
-  margin: 0 auto;
   background-color: $dark-solid;
   color: $light-solid;
+  background-image: url(/assets/images/background.png);
+  background-size: cover;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;

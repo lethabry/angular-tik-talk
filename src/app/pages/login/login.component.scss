@@ -1,0 +1,83 @@
+@import "../../../shared/scss/variables";
+.login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  max-width: 1112px;
+  height: 100vh;
+
+  &__input-content {
+    position: relative;
+    padding: 12px 20px;
+    border: 1px solid $light-solid;
+    border-radius: 2px;
+    background-color: $dark-solid;
+    margin-bottom: 16px;
+
+    &:last-of-type {
+      margin-bottom: 32px;
+    }
+  }
+
+  label,
+  input {
+    display: inline-flex;
+    width: 100%;
+  }
+
+  label {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 133%;
+    margin-bottom: 8px;
+  }
+
+  input {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: $light-transparent;
+    font-family: inherit;
+    background-color: transparent;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  .secondary-btn {
+    position: absolute;
+    top: 14px;
+    right: 24px;
+    background-color: transparent;
+    border: none;
+  }
+
+  &__content {
+    width: 440px;
+    h2 {
+      font-weight: 800;
+      font-size: 48px;
+      line-height: 117%;
+      margin-bottom: 60px;
+    }
+  }
+
+  .main-button {
+    border: 1px solid var(--dark-solid);
+    border-radius: 2px;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: $primary-primary;
+    color: $dark-solid;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 171%;
+  }
+
+  img {
+    width: calc((100% - 32px) / 2);
+    max-height: 431px;
+  }
+}
