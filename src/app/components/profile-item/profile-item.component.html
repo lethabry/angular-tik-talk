@@ -1,7 +1,7 @@
 <li>
   <article class="profile-info">
     <div class="profile-info__main">
-      <img src="/assets/images/Img.png" alt="Фото профиля" />
+      <img [src]="profile.avatarUrl | imgUrl" alt="Фото профиля" />
       <div>
         <h3>{{ profile.firstName }} {{ profile.lastName }}</h3>
         <p>{{ profile.username }}</p>

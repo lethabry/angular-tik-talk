@@ -1,4 +1,4 @@
-@import "../../shared/scss/variables";
+@import "../../../shared/scss/variables";
 
 .profile-info {
   display: grid;
@@ -35,6 +35,7 @@
     img {
       width: 71px;
       height: 71px;
+      border-radius: 50%;
     }
   }
 
@@ -82,7 +83,7 @@
       &_type_added {
         background-color: transparent;
         border-color: $primary-primary;
-        background-image: url("../../../public/assets/images/icon.png");
+        background-image: url("../../../../public/assets/images/icon.png");
         background-repeat: no-repeat;
         background-position: center;
       }
@@ -107,7 +108,7 @@
     }
   }
 }
-@media (max-width: 478px) {
+@media (max-width: 530px) {
   .profile-info {
     padding: 16px 12px;
     column-gap: 20px;

@@ -1,3 +1,26 @@
 import { Routes } from '@angular/router';
+import { LoginComponent } from './pages/login/login.component';
+import { SearchComponent } from './pages/search/search.component';
+import { MainProfileComponent } from './pages/main-profile/main-profile.component';
+import { LayoutComponent } from './pages/layout/layout.component';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+  {
+    path: '',
+    component: LayoutComponent,
+    children: [
+      {
+        path: 'search',
+        component: SearchComponent,
+      },
+      {
+        path: '',
+        component: MainProfileComponent,
+      },
+    ],
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+];
