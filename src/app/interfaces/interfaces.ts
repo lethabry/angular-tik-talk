@@ -10,3 +10,8 @@ export interface IProfile {
   city: string;
   description: string;
 }
+
+export interface IAuthToken {
+  access_token: string;
+  refresh_token: string;
+}

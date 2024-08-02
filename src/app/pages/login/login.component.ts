@@ -6,6 +6,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -16,6 +17,8 @@ import { AuthService } from '../../services/auth.service';
 })
 export class LoginComponent {
   authServise = inject(AuthService);
+  router = inject(Router);
+
   form = new FormGroup({
     username: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required),
@@ -24,8 +27,8 @@ export class LoginComponent {
   onSubmit() {
     const { username, password } = this.form.value;
     if (username && password) {
-      this.authServise.login({ username, password }).subscribe((data) => {
-        console.log(data);
+      this.authServise.login({ username, password }).subscribe(() => {
+        this.router.navigate(['/search']);
       });
     }
     this.form.reset();
