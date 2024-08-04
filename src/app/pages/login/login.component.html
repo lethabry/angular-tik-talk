@@ -35,13 +35,17 @@
       <div class="login__input-content">
         <input
           formControlName="password"
-          type="password"
+          [type]="isPasswordVisible() ? 'text' : 'password'"
           id="password"
           name="password"
           placeholder="Введите пароль"
           required
         />
-        <button class="secondary-btn">
+        <button
+          class="secondary-btn"
+          type="button"
+          (click)="isPasswordVisible.set(!isPasswordVisible())"
+        >
           <svg
             width="19"
             height="17"

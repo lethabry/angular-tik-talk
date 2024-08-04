@@ -1,1 +1,104 @@
+@import "../../../shared/scss/variables";
 
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 12px;
+  min-height: 100vh;
+  gap: 20px;
+
+  &__main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__logo {
+    background-color: transparent;
+    border: none;
+    margin-left: 16px;
+    width: 61px;
+    height: 74px;
+    cursor: pointer;
+  }
+
+  &__navigation-item {
+    padding: 8px 16px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__navigation-icon {
+    width: 16px;
+    height: 21px;
+    background-position: center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+
+    &_type_home {
+      background-image: url("../../../../public/assets/images/home.svg");
+    }
+
+    &_type_chat {
+      background-image: url("../../../../public/assets/images/chat.svg");
+    }
+
+    &_type_search {
+      background-image: url("../../../../public/assets/images/search.svg");
+    }
+  }
+
+  h3 {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    color: $light-transparent;
+    margin-left: 16px;
+  }
+
+  &__subscriber-item {
+    padding: 8px 16px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__subscribers-button {
+    background-color: transparent;
+    border: none;
+    color: $primary-primary;
+    padding-left: 16px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+
+    svg {
+      vertical-align: middle;
+    }
+  }
+
+  &__info {
+    flex: 0 0 auto;
+  }
+}
