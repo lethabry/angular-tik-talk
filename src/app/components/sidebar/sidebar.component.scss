@@ -6,6 +6,7 @@
   padding: 20px 12px;
   min-height: 100vh;
   gap: 20px;
+  background-color: $dark-solid;
 
   &__main {
     flex: 1 0 auto;
@@ -32,30 +33,40 @@
     font-size: 14px;
     font-weight: 700;
     line-height: 24px;
+    cursor: pointer;
 
     &:last-of-type {
       margin-bottom: 0;
     }
+
+    &:hover {
+      background-color: $dark-active;
+      border-radius: 2px;
+
+      .sidebar__navigation-button {
+        color: $primary-primary;
+      }
+
+      .sidebar__navigation-button svg {
+        color: $primary-primary;
+      }
+    }
   }
 
-  &__navigation-icon {
-    width: 16px;
-    height: 21px;
-    background-position: center;
+  &__navigation-button {
     background-color: transparent;
-    background-repeat: no-repeat;
     border: none;
-
-    &_type_home {
-      background-image: url("../../../../public/assets/images/home.svg");
-    }
-
-    &_type_chat {
-      background-image: url("../../../../public/assets/images/chat.svg");
-    }
-
-    &_type_search {
-      background-image: url("../../../../public/assets/images/search.svg");
+    color: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    svg {
+      width: 16px;
+      height: 16px;
+      color: $light-solid;
     }
   }
 
@@ -67,24 +78,7 @@
     margin-left: 16px;
   }
 
-  &__subscriber-item {
-    padding: 8px 16px;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 24px;
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-  }
-
-  &__subscribers-button {
-    background-color: transparent;
-    border: none;
+  &__subscribers-link {
     color: $primary-primary;
     padding-left: 16px;
     display: flex;
@@ -92,13 +86,45 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 16px;
+    gap: 12px;
 
     svg {
-      vertical-align: middle;
+      width: 16px;
+      height: 16px;
+      color: $primary-primary;
     }
   }
 
   &__info {
+    display: flex;
     flex: 0 0 auto;
+    gap: 12px;
+    padding: 4px 16px;
+    align-items: center;
+
+    &:hover {
+      background-color: $dark-active;
+      border-radius: 2px;
+
+      span {
+        color: $primary-primary;
+      }
+      svg {
+        color: $primary-primary;
+      }
+    }
+
+    span {
+      flex: 1 0 auto;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 24px;
+    }
+
+    svg {
+      width: 14px;
+      height: 14px;
+      color: $light-solid;
+    }
   }
 }
