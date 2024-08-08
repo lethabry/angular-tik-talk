@@ -23,9 +23,15 @@ export class ProfileService {
       .pipe(tap((data) => this.me.set(data)));
   }
 
-  getSubscribers() {
+  getSubscribers(num: number) {
     return this.http
       .get<IPagable<IProfile>>(`${this.urlPath}account/subscribers/`)
-      .pipe(map((data) => data.items.slice(0, 3)));
+      .pipe(map((data) => data.items.slice(0, num)));
+  }
+
+  getProfile(id: string) {
+    return this.http
+      .get<IProfile>(`${this.urlPath}account/${id}`)
+      .pipe(tap((data) => this.me.set(data)));
   }
 }

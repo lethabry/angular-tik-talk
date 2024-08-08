@@ -1,0 +1,18 @@
+@if (profile(); as profile) {
+<header class="profile-header">
+  <div class="profile-header__main-info">
+    @if (profile.avatarUrl) {
+    <img [src]="profile.avatarUrl | imgUrl" alt="Фотография пользователя" />
+    } @else {
+    <img src="/assets/images/initialAvatar.svg" alt="Фотография пользователя" />
+    }
+    <h1>{{ profile.firstName }} {{ profile.lastName }}</h1>
+    <span>{{ profile.username }}</span>
+  </div>
+  <a class="profile-header__button" [routerLink]="['/settings']">
+    <span>Редактировать</span>
+    <svg icon="settings"></svg>
+  </a>
+</header>
+
+}

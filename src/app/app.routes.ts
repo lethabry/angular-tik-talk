@@ -15,7 +15,7 @@ export const routes: Routes = [
         component: SearchComponent,
       },
       {
-        path: '',
+        path: 'profile/:id',
         component: MainProfileComponent,
       },
     ],

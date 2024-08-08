@@ -1,1 +1,37 @@
-<p>main-profile works!</p>
+@if(profile$ | async; as profile){
+<app-profile-header [profile]="profile"></app-profile-header>
+<main class="profile-info">
+  <app-post-feed></app-post-feed>
+  <div class="profile-info__detailed-info">
+    <div>
+      <h3>Подписчики</h3>
+      <ul class="profile-info__subscribers">
+        @for (subscriber of subscribers$ | async; track subscriber.id ) {
+        <li class="profile-info__subscriber">
+          <a [routerLink]="['/profile', subscriber.id]">
+            <img
+              [src]="subscriber.avatarUrl | imgUrl"
+              alt="Фотография профиля"
+            />
+          </a>
+        </li>
+        }
+        <a class="profile-info__search-link" [routerLink]="['/search']"> </a>
+      </ul>
+    </div>
+    <div>
+      <h3>Навыки</h3>
+      <ul class="profile-info__skills">
+        @for (key of ['JS', 'CSS', 'HTML', 'Angular', 'Frontend']; track $index
+        ) {
+        <li class="profile-info__skill">{{ key }}</li>
+        }
+      </ul>
+    </div>
+    <div>
+      <h3>О себе</h3>
+      <p class="profile-info__description">{{ profile.description }}</p>
+    </div>
+  </div>
+</main>
+}

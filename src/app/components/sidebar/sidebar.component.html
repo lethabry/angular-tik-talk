@@ -32,10 +32,7 @@
     @if (me(); as me) { @if (me.avatarUrl) {
     <img [src]="me.avatarUrl | imgUrl" alt="Фотография пользователя" />
     } @else {
-    <img
-      src="/assets/images/testSubscribers/Img(3).png"
-      alt="Фотография пользователя"
-    />
+    <img src="/assets/images/initialAvatar.svg" alt="Фотография пользователя" />
 
     } <span>{{ me.username }}</span
     >}

@@ -25,7 +25,7 @@ export class SidebarComponent {
   profileService = inject(ProfileService);
   me = this.profileService.me;
 
-  subscribers$ = this.profileService.getSubscribers();
+  subscribers$ = this.profileService.getSubscribers(3);
 
   navigationItems = [
     { name: 'Моя страница', svg: 'home', link: '' },
